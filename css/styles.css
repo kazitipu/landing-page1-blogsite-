@@ -1,0 +1,561 @@
+/* ------------Global----------- */
+html,
+body {
+  margin: 0%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+h3 {
+  margin: 0%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin: 0%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.btn {
+  border: none;
+  border-radius: 2rem;
+  background: skyblue;
+  padding: 0.7rem 2rem;
+  font-size: 1.3rem;
+}
+.container {
+  margin: 0 5vw;
+}
+hr {
+  margin: 3rem;
+}
+div {
+  padding: 0%;
+}
+/* -------x-----Global------x----- */
+
+/* -------------NavBar-------------- */
+
+.nav {
+  background: white;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: height 0.7s ease-in-out;
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nav-brand {
+  color: darkgrey;
+  margin: 0.6rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: lighter;
+}
+
+.nav-link {
+  color: darkgrey;
+  padding: 1.5rem 1rem;
+  font-size: 1.4rem;
+}
+.nav-link:hover {
+  background: skyblue;
+  color: white;
+}
+.nav-icons {
+  margin: 0.6rem 2rem;
+}
+
+.nav-icon {
+  padding: 0 0.3rem;
+  font-size: 1.2rem;
+}
+.nav-icon:hover {
+  cursor: pointer;
+  color: darkblue;
+}
+
+.toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+.toggle-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.4rem;
+  font-size: 1.2rem;
+  color: grey;
+}
+.toggle-height {
+  height: 35rem;
+}
+
+@media only screen and (max-width: 850px) {
+  .nav-items {
+    flex-direction: column;
+  }
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+  }
+  .toggle-collapse {
+    display: initial;
+  }
+}
+/* -------x------NavBar-------x------- */
+
+/* -------------main------------------ */
+
+/* ----------------hero---------------- */
+
+.hero {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  background: url("../assets/Background-image.png");
+  background-size: cover;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.content {
+  padding-top: 10rem;
+  text-align: center;
+  color: white;
+}
+
+.content h1,
+h3 {
+  margin: 0.3rem;
+}
+.content .btn {
+  margin: 1.8rem;
+}
+
+.content .btn:hover {
+  background: transparent;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+}
+
+/* ------x--------hero--------x-------- */
+
+/*------------------ blog carousel ------------ */
+
+.blogs {
+  background: url("../assets/Abract01.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
+}
+
+.blogpost {
+  padding-top: 7rem;
+  width: fit-content;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 70%;
+  margin: 2rem 3rem;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-title {
+  padding: 2rem 0rem;
+}
+.blog-title h3 {
+  font-weight: bold;
+}
+.btn-blog {
+  padding: 0.8rem;
+}
+.btn-blog:hover {
+  background-color: lightblue;
+  color: black;
+  cursor: pointer;
+}
+.blog-title span {
+  font-weight: lighter;
+  display: block;
+}
+
+section .container .owl-nav {
+  position: absolute;
+  top: 10%;
+  margin: 0 auto;
+  width: 100%;
+  outline: none;
+}
+
+.owl-carousel .owl-nav .owl-prev .owl-navigation-prev,
+.owl-carousel .owl-nav .owl-next .owl-navigation-next {
+  background: transparent;
+  color: rgb(19, 18, 18);
+  font-size: 2rem;
+}
+
+/*--------x---------- blog carousel ------x------ */
+
+/*------------- site content -------------*/
+
+/* ........... main blogs ............ */
+
+.site-content-container {
+  display: grid;
+  grid-template-columns: repeat(2, 70% 30%);
+  padding-top: 3rem;
+}
+
+.site-blogPost {
+  padding: 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.site-blog-image-container {
+  overflow: hidden;
+  padding: 0%;
+  z-index: 5;
+}
+.site-blog-image-container .site-blog-image {
+  width: 100%;
+  transition: 1s ease-in;
+  padding: 0%;
+  z-index: 20;
+}
+.site-blog-image:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  z-index: 1;
+}
+.site-blogPost .post-info {
+  z-index: 5;
+}
+.site-blogPost .post-info span {
+  margin-left: 14rem;
+  padding: 1rem 2rem;
+  background: skyblue;
+  border-radius: 2rem;
+}
+
+.site-blog-content {
+  margin-top: 1rem;
+}
+
+/* ........x... main blogs .....x........ */
+
+/* .......... Side Bar ......... */
+.category li {
+  width: 70%;
+  padding: 0.5rem 1rem;
+  margin-right: 3rem;
+  margin-bottom: 0.8rem;
+  background: skyblue;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-sidebar-container .popular-post {
+  margin-top: 10rem;
+}
+.site-sidebar-container .popular-post .site-blogPost {
+  margin-bottom: 2rem !important;
+}
+.site-sidebar-container .popular-post .site-blogPost .post-info {
+  /* padding: 0% !important; */
+  /* border: none; */
+  position: absolute;
+  margin-top: 7.8rem !important;
+  /* display: none; */
+}
+.site-sidebar-container .popular-post .site-blogPost .post-info span {
+  margin-left: 0rem;
+  padding: 0.2rem 0.3rem;
+  background: white;
+  border-radius: 0rem;
+  margin-bottom: 2rem !important;
+}
+.site-sidebar-container .popular-post .site-blogPost .post-info span i {
+  font-weight: lighter;
+}
+.site-sidebar-container .popular-post .site-blogPost .site-blog-content {
+  margin-bottom: 2rem;
+  margin-top: 0rem !important;
+}
+
+.site-sidebar-container .popular-post .site-blog-content h2 {
+  font-family: serif;
+  font-size: 1.4rem !important;
+  padding-top: 0rem !important;
+  margin: 0.5rem 0 !important;
+}
+.newsletter {
+  margin-top: 12rem;
+}
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 3rem;
+}
+
+.input-field {
+  padding: 0.8rem 0.5rem;
+}
+.form-btn {
+  border-radius: 0;
+  margin-top: 0.6rem;
+}
+
+.tags {
+  margin-top: 10rem;
+}
+.tags ul {
+  width: 70%;
+}
+.tags .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.tags a {
+  padding: 0.7rem 1rem;
+  background: skyblue;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 0.6rem;
+  border-radius: 4rem;
+}
+/* ......x.... Side Bar ......x...... */
+
+/*------ pagination ----- */
+.pagination {
+  margin: 5rem 15rem;
+}
+
+.pagination a {
+  padding: 0.6rem 0.8rem;
+  border-radius: 4rem;
+  background: rgb(41, 37, 37);
+  color: white;
+}
+/*----x---- pagination ----x--- */
+
+/*-------x------ site content ------x-------*/
+
+/* ------------ footer ----------- */
+.footer {
+  width: 100%;
+  background: rgb(14, 13, 13);
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 25% 25% 25% 25%);
+}
+
+.footer h2 {
+  color: rgb(233, 224, 224);
+  margin-left: 4rem;
+}
+.footer p {
+  color: rgb(160, 151, 151);
+  margin-left: 2rem;
+}
+.footer-newsletter .input-field {
+  margin-left: 2rem;
+}
+.footer-arrow {
+  padding: 0.8rem 1rem 1rem 1rem;
+  background: rgb(159, 197, 212);
+}
+
+.footer-images-row {
+  display: flex;
+  flex-direction: row;
+}
+.footer-images-row img {
+  display: inline-block;
+  width: 25%;
+  height: 50%;
+  margin: 0.3rem 0.5rem;
+}
+.footer-icon {
+  color: rgb(175, 165, 165);
+  padding: 0rem 0.7rem;
+  margin-left: 1.5rem;
+  font-weight: bolder;
+}
+.copy-rights {
+  color: rgb(175, 165, 165);
+  text-align: center;
+  margin-top: 3rem;
+}
+.copy-rights h4 {
+  margin: 0%;
+}
+
+/* ---------x------------ footer ---------x------- */
+
+/* -------x------main----------x-------- */
+
+/*------------- responsive styling for laptop ----------- */
+@media only screen and (max-width: 1130px) {
+  .nav {
+    min-height: 6vh !important;
+  }
+  .nav-brand {
+    font-weight: 2rem !important;
+  }
+  .hero {
+    width: 100% !important;
+    height: 80vh !important;
+  }
+  /* .site-sidebar-container .popular-post .site-blogPost .post-info {
+    display: none !important;
+  } */
+  .pagination {
+    margin: 4rem 16rem !important;
+  }
+
+  .pagination a {
+    padding: 0.4rem 0.6rem !important;
+    border-radius: 4rem;
+    background: rgb(41, 37, 37);
+    color: white;
+  }
+  .site-sidebar-container h2 {
+    margin-left: 2rem;
+  }
+}
+
+/*-------x--------- responsive styling for laptop -----x------- */
+/* ------- responsive styling for tablet ------ */
+@media only screen and (max-width: 770px) {
+  .site-blogPost .post-info span {
+    margin-left: 5rem !important;
+    padding: 0.7rem 1.4rem !important;
+    background: skyblue;
+    border-radius: none !important;
+  }
+  .blogs {
+    height: 80vh !important;
+  }
+  .pagination {
+    margin: 2.5rem 8rem !important;
+  }
+
+  .pagination a {
+    padding: 0.2rem 0.4rem !important;
+    border-radius: 4rem;
+    background: rgb(41, 37, 37);
+    color: white;
+  }
+  .tags a {
+    padding: 0.5rem 0.7rem !important;
+    border-radius: 3rem !important;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* -----x------ responsive styling for tablet ---x------ */
+
+/* ---------- responsive styling for large mobile --------- */
+@media only screen and (max-width: 613px) {
+  .site-content-container {
+    display: grid;
+    grid-template-columns: 100% !important;
+    padding-top: 3rem;
+  }
+  .blogs {
+    height: 70vh !important;
+  }
+  .pagination {
+    margin: 2.5rem 12rem !important;
+  }
+
+  .pagination a {
+    padding: 0.2rem 0.4rem !important;
+    border-radius: 4rem;
+    background: rgb(41, 37, 37);
+    color: white;
+  }
+  .tags a {
+    padding: 0.8rem 1rem !important;
+    border-radius: 4rem !important;
+  }
+  .toggle-height {
+    height: 33rem !important;
+  }
+}
+
+/* ------x---- responsive styling for large mobile ---x------ */
+
+/* ------ responsive styling for medium mobile ------ */
+@media only screen and (max-width: 567px) {
+  .pagination {
+    margin: 2.5rem 2.5rem 0rem 4rem !important;
+  }
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: 100% !important;
+  }
+}
+@media only screen and (max-width: 433px) {
+  .site-blogPost .post-info span {
+    display: none;
+  }
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: 100% !important;
+  }
+  .pagination {
+    margin: 2.5rem 2.5rem 0rem 7rem !important;
+  }
+  .blogs {
+    height: 60vh !important;
+  }
+}
+
+/* -----x----- responsive styling for medium mobile ------x---- */
+
+/*---------- responsive styling for small mobile ----------*/
+@media only screen and (max-width: 322px) {
+  .pagination {
+    margin: 2.5rem 2.5rem 0rem 4rem !important;
+  }
+  .blogs {
+    height: 50vh !important;
+  }
+}
+/*----x------ responsive styling for small mobile -------x---*/
